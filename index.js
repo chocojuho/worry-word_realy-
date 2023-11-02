@@ -42,8 +42,11 @@ io.on('connection', (socket) => {
     socket.emit("connected2",roomusers);
 
     socket.on('login', (msg) => {
-        users.push(msg);
-        io.emit("newUser",msg);
+        msg.serial = socket.id;
+        if(msg.serial){
+            users.push(msg);
+            io.emit("newUser",msg);
+        }
     });
     
     socket.on('disconnect', () => {
@@ -59,14 +62,15 @@ io.on('connection', (socket) => {
         users.splice(cnt,1);
     });
     socket.on("page",(puser)=>{
-
-        users.push(puser.userinfo);
-        socket.join(puser.roominfo);
-        if(!roomusers[puser.roominfo]){
-            roomusers[puser.roominfo] = [];
-            io.emit("newRoom",puser.roominfo);
-            socket.emit("king",puser.userinfo.serial);
-        }
+        puser.userinfo.serial = socket.id;
+        if(puser.userinfo.serial && puser.roominfo){
+            users.push(puser.userinfo);
+            socket.join(puser.roominfo);
+            if(!roomusers[puser.roominfo]){
+                roomusers[puser.roominfo] = [];
+                io.emit("newRoom",puser.roominfo);
+                socket.emit("king",puser.userinfo.serial);
+            }
         roomusers[puser.roominfo].push(puser.userinfo);
        
         socket.broadcast.to(puser.roominfo).emit("newUserRoom",puser.userinfo);
@@ -100,6 +104,7 @@ io.on('connection', (socket) => {
                 io.to(puser.roominfo).emit("error");
             }
         });
+        }
     });
     socket.on("game",(guser)=>{
         if(!gameusers[guser.roomname]){

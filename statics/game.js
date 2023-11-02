@@ -18,7 +18,6 @@ const nower = document.querySelector('.nower');
 let now_word = document.getElementById("word-input");
 const popup = document.getElementById('popup');
 const popuptext = document.querySelector('#popup > p');
-
 const nowpath = window.location.pathname;
 const roomName =  nowpath.slice(6,nowpath.length +1);   
 let gamescore = {};

@@ -17,13 +17,13 @@ function getCookieValue(cookieName) {
 }
 const user = getCookieValue('id');
 const userNameC = document.getElementById('userNameC');
-const roomName = document.getElementById('room-name');
 const insert = document.getElementById('insert');
-
+const nowpath = window.location.pathname;
+console.log(nowpath);
+const roomName =  nowpath.slice(6,nowpath.length +1); 
 userNameC.textContent = user;
-console.log(roomName.textContent);
 setTimeout(() => {
-  socket.emit("page",{userinfo : {id : user, serial : socket.id},roominfo : roomName.textContent});
+  socket.emit("page",{userinfo : {id : user, serial : socket.id},roominfo : roomName});
 }, 1000);
 let cnt = 0;
 socket.on("inroom",(users)=>{
@@ -74,7 +74,7 @@ function start(){
   socket.emit("king");
 }
 socket.on("start",()=>{
-  window.location.href = `/game/${roomName.textContent}`;
+  window.location.href = `/game/${roomName}`;
 });
 
 socket.on("error",()=>{
