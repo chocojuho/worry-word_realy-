@@ -1,0 +1,84 @@
+.container{
+    width: 90%;
+    height: 80%;
+    margin: 20px 0px;
+    background-color: #CBF9FF;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.king{
+     background-color: indianred !important;
+}
+#only{
+    display: none;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container > div:first-child{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    font-size: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(180deg, #00B8E0 1%, #CBF9FF 90%);
+}
+.container > div:first-child > div:first-child{
+    padding: 0px 5px;
+    border-right:solid 2px;
+}
+.container > div:first-child > div:nth-child(2){
+    padding: 0px 5px;
+    border-left:solid 2px;
+}
+.container > div:first-child > div:nth-child(2) >a{
+    text-decoration: none;
+    color: #000000;
+}
+.container > div:nth-child(2){
+    display: flex;
+    width: 100%;
+    height: 90%;
+    font-size: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#insert{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+text-align: center;
+overflow-x: hidden;
+overflow-y: scroll;
+}
+#insert > div{
+    display: flex;
+    width: 40%;
+    height: 80px;    margin: 5%;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    flex-direction: column;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #00E0FF;
+    opacity: 31%;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans+KR:wght@500&display=swap');
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction:column;
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+.inner{
+    height: 90%;
+    width: 100%;
+    display: flex;
+}
+.left{
+    flex : 1;
+    width: 50%;
+    padding: 5%;
+    display: flex;
+}
+.right{
+    flex : 1;
+    width: 50%;
+    padding: 5%;
+    display: flex;
+    
+    flex-direction: column;
+}
+.room{
+    background-color: #CBF9FF;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.roomenter{
+    margin-bottom: 20px;
+    flex : 1;
+    width: 100%;
+    background-color: #CBF9FF;
+}
+.notion{
+    flex : 1;
+    width: 100%;
+    background-color: #CBF9FF;
+}
+.room > div:first-child{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    font-size: 2.4rem;
+    text-align: center;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(180deg, #00B8E0 1%, #CBF9FF 90%);
+}
+.room > div:nth-child(2){
+    width: 100%;
+    height: 85%;
+    text-align: center;
+    color : blue;
+}
+
+.notion > div:first-child{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(180deg, #00B8E0 1%, #CBF9FF 90%);
+}
+.notion > div:nth-child(2){
+    width: 100%;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 75%;
+}
+.notion > div> p{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.roomenter > div:first-child{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(180deg, #00B8E0 1%, #CBF9FF 90%);
+}
+.roomenter > div> p{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.roomenter > div:nth-child(2){
+    width: 100%;
+    height: 75%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+input{
+    width: 90%;
+    height: 50%;
+}
+button{
+    width: 90%;
+    height: 30%;
+    color : white;
+    font-size: 2rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #00E0FF;
+    opacity: 31%;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: #CBF9FF;
+    height: 200px;
+    position: relative;
+    text-align: center;
+}
+
+
+.popup-content > div:first-child{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(180deg, #00B8E0 1%, #CBF9FF 90%);
+}
+.popup-content > div> p{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.popup-content > div:nth-child(2){
+    width: 100%;
+    height: 75%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inbox{
+    display: flex;
+    height: 80px;    margin: 5%;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    flex-direction: column;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #00E0FF;
+    opacity: 31%;
+    margin-bottom: 10px;
+}

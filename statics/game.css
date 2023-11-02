@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans+KR:wght@500&display=swap');
+
+.container{
+    display: flex;
+    height: 85%;
+    width: 100%;
+}
+#load{
+    height: 5%;
+    width: 100%;
+    transition: background 0.5s ease;
+    background: linear-gradient(90deg,#00B4DB 0% ,#0083B0 100% );
+}
+#load > p{
+    font-size: 2rem;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+#score-out{
+    font-size: 1.3rem;
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.score {
+    margin: 5px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#score-out,#blank{
+    width: 25%;
+}
+#word-out{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+}
+body,html{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    overflow: hidden;
+}
+form{
+    display: flex;
+}
+.word{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(180deg,#00B4DB 0%, #0083B0 100%);
+}
+
+.word > div:first-child{
+    display: flex;
+    width: 100%;
+    height: 30%;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.word > div> p{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.word > div:nth-child(2){
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#word-input{
+    border: 0px;
+    height: 90%;
+    width: 90%;
+    
+}
+
+.before1{
+    display: none;
+    height: 130px;
+    width: 62%;
+    position: relative;
+    top: 0;
+    left: 0;
+    perspective-origin: center;
+    text-align: center;
+    perspective: 600px;
+}
+.before1 .word{
+    transform: rotateX(45deg);
+    position:absolute;
+    top:0; left:0; 
+}
+.popup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+.popup > p {
+    color : red;
+    font-size: 2rem;
+    font: 'Noto Sans KR', sans-serif
+}
+
+.nower{
+    height: 130px;
+    width: 70%;
+    position: relative;
+  top:0; left:0; 
+    perspective-origin:center;
+  text-align:center;
+  perspective:100px;
+}
+.nower .word{
+    position:absolute;
+    top:0; left:0; 
+}
+
+.before2{   
+    display: none;
+    height: 100px;
+    width: 45%;
+    position: relative;
+    top: 0;
+    left: 0;
+    perspective-origin: center;
+    text-align: center;
+    perspective: 300px;
+}
+.before2 .word{
+    transform: rotateX(45deg);
+    position:absolute;
+    top:0; left:0; 
+}
+
+.word > div:nth-child(2) > p {
+    color: lightgrey;
+    font-size: 0.9rem;
+}

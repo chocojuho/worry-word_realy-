@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/header.css">
+    <link rel="stylesheet" type="text/css" href="/background.css">
+    <link rel="stylesheet" type="text/css" href="/room.css">
+</head>
+<body>
+    
+    <%- include('header') %>
+    <div class="container">
+        <div>
+            <div><p id="room-name"><%=roomid %></p></div><div id="only"><a onclick="start()">START</a></div>
+        </div>
+        <div id="insert">
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+    <script src="/room.js"></script>
+</body>
+</html>
